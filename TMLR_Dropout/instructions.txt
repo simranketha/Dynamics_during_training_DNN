@@ -1,0 +1,140 @@
+Here we train CNN and ResNet-18 models with dropout and perform MASC and VeLPIC over the layers of the network during training.
+
+
+Model_dropout_training.py code has training CNN and ResNet-18 with dropout 
+MASC_dropout.py code has MASC for CNN and ResNet-18 with dropout corrupt subspace during training layerwise 
+VeLPIC_dropout.py code has VeLPIC for CNN and ResNet-18 with dropout corrupt subspace during training layerwise 
+
+ResNet18 specific codes are avaible in extra folder.
+ResNet18_dropout_training.py code has training ResNet-18-CIFAR10 with dropout for 100% training accuracy 
+MASC_dropout_ResNet.py code has MASC for ResNet-18-CIFAR10 with dropout corrupt subspace during training layerwise 
+VeLPIC_dropout_ResNet.py code has VeLPIC for ResNet-18-CIFAR10 with dropout corrupt subspace during training layerwise 
+
+1. To train models with dropout and different corruption degrees:
+
+python Model_dropout_training.py -corr 0.0 -run 1 -model CNN -dataset FashionMNIST 
+python Model_dropout_training.py -corr 0.2 -run 1 -model CNN -dataset FashionMNIST 
+python Model_dropout_training.py -corr 0.4 -run 1 -model CNN -dataset FashionMNIST 
+python Model_dropout_training.py -corr 0.6 -run 1 -model CNN -dataset FashionMNIST
+python Model_dropout_training.py -corr 0.8 -run 1 -model CNN -dataset FashionMNIST
+
+python Model_dropout_training.py -corr 0.0 -run 1 -model CNN -dataset MNIST 
+python Model_dropout_training.py -corr 0.2 -run 1 -model CNN -dataset MNIST
+python Model_dropout_training.py -corr 0.4 -run 1 -model CNN -dataset MNIST
+python Model_dropout_training.py -corr 0.6 -run 1 -model CNN -dataset MNIST
+python Model_dropout_training.py -corr 0.8 -run 1 -model CNN -dataset MNIST
+
+python Model_dropout_training.py -corr 0.0 -run 1 -model CNN -dataset CIFAR10 
+python Model_dropout_training.py -corr 0.2 -run 1 -model CNN -dataset CIFAR10 
+python Model_dropout_training.py -corr 0.4 -run 1 -model CNN -dataset CIFAR10 
+python Model_dropout_training.py -corr 0.6 -run 1 -model CNN -dataset CIFAR10
+python Model_dropout_training.py -corr 0.8 -run 1 -model CNN -dataset CIFAR10
+
+python Model_dropout_training.py -corr 0.0 -run 1 -model ResNet18 -dataset CIFAR10 
+python Model_dropout_training.py -corr 0.2 -run 1 -model ResNet18 -dataset CIFAR10 
+python Model_dropout_training.py -corr 0.4 -run 1 -model ResNet18 -dataset CIFAR10 
+python Model_dropout_training.py -corr 0.6 -run 1 -model ResNet18 -dataset CIFAR10
+python Model_dropout_training.py -corr 0.8 -run 1 -model ResNet18 -dataset CIFAR10
+
+
+2. To run MASC on layerwise outputs during training
+
+python MASC_dropout.py -corr 0.0 -model CNN -dataset FashionMNIST -layer_number 999 -run 1
+python MASC_dropout.py -corr 0.2 -model CNN -dataset FashionMNIST -layer_number 999 -run 1
+python MASC_dropout.py -corr 0.4 -model CNN -dataset FashionMNIST -layer_number 999 -run 1
+python MASC_dropout.py -corr 0.6 -model CNN -dataset FashionMNIST -layer_number 999 -run 1
+python MASC_dropout.py -corr 0.8 -model CNN -dataset FashionMNIST -layer_number 999 -run 1
+
+python MASC_dropout.py -corr 0.0 -model CNN -dataset MNIST -layer_number 999 -run 1 
+python MASC_dropout.py -corr 0.2 -model CNN -dataset MNIST -layer_number 999 -run 1 
+python MASC_dropout.py -corr 0.4 -model CNN -dataset MNIST -layer_number 999 -run 1 
+python MASC_dropout.py -corr 0.6 -model CNN -dataset MNIST -layer_number 999 -run 1 
+python MASC_dropout.py -corr 0.8 -model CNN -dataset MNIST -layer_number 999 -run 1 
+
+python MASC_dropout.py -corr 0.0 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+python MASC_dropout.py -corr 0.2 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+python MASC_dropout.py -corr 0.4 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+python MASC_dropout.py -corr 0.6 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+python MASC_dropout.py -corr 0.8 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+
+
+python MASC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+python MASC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+python MASC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+python MASC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+python MASC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+
+python MASC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+python MASC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+python MASC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+python MASC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+python MASC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+
+python MASC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+python MASC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+python MASC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+python MASC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+python MASC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+
+python MASC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+python MASC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+python MASC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+python MASC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+python MASC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+
+python MASC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+python MASC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+python MASC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+python MASC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+python MASC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+
+
+3. To run VeLPIC on layerwise outputs during training
+
+python VeLPIC_dropout.py -corr 0.0 -model CNN -dataset FashionMNIST -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.2 -model CNN -dataset FashionMNIST -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.4 -model CNN -dataset FashionMNIST -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.6 -model CNN -dataset FashionMNIST -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.8 -model CNN -dataset FashionMNIST -layer_number 999 -run 1 
+
+python VeLPIC_dropout.py -corr 0.0 -model CNN -dataset MNIST -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.2 -model CNN -dataset MNIST -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.4 -model CNN -dataset MNIST -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.6 -model CNN -dataset MNIST -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.8 -model CNN -dataset MNIST -layer_number 999 -run 1 
+
+python VeLPIC_dropout.py -corr 0.0 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.2 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.4 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.6 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+python VeLPIC_dropout.py -corr 0.8 -model CNN -dataset CIFAR10 -layer_number 999 -run 1 
+
+python VeLPIC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+python VeLPIC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+python VeLPIC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+python VeLPIC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+python VeLPIC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 9 -run 1 
+
+python VeLPIC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+python VeLPIC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+python VeLPIC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+python VeLPIC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+python VeLPIC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 8 -run 1 
+
+python VeLPIC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+python VeLPIC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+python VeLPIC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+python VeLPIC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+python VeLPIC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 7 -run 1 
+
+python VeLPIC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+python VeLPIC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+python VeLPIC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+python VeLPIC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+python VeLPIC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 6 -run 1 
+
+python VeLPIC_dropout.py -corr 0.0 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+python VeLPIC_dropout.py -corr 0.2 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+python VeLPIC_dropout.py -corr 0.4 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+python VeLPIC_dropout.py -corr 0.6 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 
+python VeLPIC_dropout.py -corr 0.8 -model ResNet18 -dataset CIFAR10 -layer_number 5 -run 1 

@@ -1,0 +1,74 @@
+# logistic_regression_probing: logistic regression prob per layer over the layers of the network during training. For ResNet-18 model use specific layer numbers and for other models use 999
+
+python logistic_regression_probing.py -dataset MNIST -model MLP -corr 0.0  -layer_number 999 
+python logistic_regression_probing.py -dataset MNIST -model MLP -corr 0.2  -layer_number 999 
+python logistic_regression_probing.py -dataset MNIST -model MLP -corr 0.4  -layer_number 999 
+python logistic_regression_probing.py -dataset MNIST -model MLP -corr 0.6  -layer_number 999 
+python logistic_regression_probing.py -dataset MNIST -model MLP -corr 0.8  -layer_number 999
+
+python logistic_regression_probing.py -dataset CIFAR10 -model MLP -corr 0.0  -layer_number 999 
+python logistic_regression_probing.py -dataset CIFAR10 -model MLP -corr 0.2  -layer_number 999 
+python logistic_regression_probing.py -dataset CIFAR10 -model MLP -corr 0.4  -layer_number 999 
+python logistic_regression_probing.py -dataset CIFAR10 -model MLP -corr 0.6  -layer_number 999 
+python logistic_regression_probing.py -dataset CIFAR10 -model MLP -corr 0.8  -layer_number 999 
+
+python logistic_regression_probing.py -dataset FashionMNIST -model CNN -corr 0.0  -layer_number 999 
+python logistic_regression_probing.py -dataset FashionMNIST -model CNN -corr 0.2  -layer_number 999 
+python logistic_regression_probing.py -dataset FashionMNIST -model CNN -corr 0.4  -layer_number 999 
+python logistic_regression_probing.py -dataset FashionMNIST -model CNN -corr 0.6  -layer_number 999 
+python logistic_regression_probing.py -dataset FashionMNIST -model CNN -corr 0.8  -layer_number 999 
+
+python logistic_regression_probing.py -dataset MNIST -model CNN -corr 0.0  -layer_number 999 
+python logistic_regression_probing.py -dataset MNIST -model CNN -corr 0.2  -layer_number 999 
+python logistic_regression_probing.py -dataset MNIST -model CNN -corr 0.4  -layer_number 999 
+python logistic_regression_probing.py -dataset MNIST -model CNN -corr 0.6  -layer_number 999 
+python logistic_regression_probing.py -dataset MNIST -model CNN -corr 0.8  -layer_number 999 
+
+python logistic_regression_probing.py -dataset CIFAR10 -model CNN -corr 0.0  -layer_number 999 
+python logistic_regression_probing.py -dataset CIFAR10 -model CNN -corr 0.2  -layer_number 999 
+python logistic_regression_probing.py -dataset CIFAR10 -model CNN -corr 0.4  -layer_number 999 
+python logistic_regression_probing.py -dataset CIFAR10 -model CNN -corr 0.6  -layer_number 999 
+python logistic_regression_probing.py -dataset CIFAR10 -model CNN -corr 0.8  -layer_number 999 
+
+python logistic_regression_probing.py -dataset TinyImageNet -model AlexNet -corr 0.0 -layer_number 999 
+python logistic_regression_probing.py -dataset TinyImageNet -model AlexNet -corr 0.2 -layer_number 999 
+python logistic_regression_probing.py -dataset TinyImageNet -model AlexNet -corr 0.4 -layer_number 999 
+python logistic_regression_probing.py -dataset TinyImageNet -model AlexNet -corr 0.6 -layer_number 999 
+python logistic_regression_probing.py -dataset TinyImageNet -model AlexNet -corr 0.8 -layer_number 999 
+
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.0 -layer_number 8 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.2 -layer_number 8 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.4 -layer_number 8 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.6 -layer_number 8 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.8 -layer_number 8 
+
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.0 -layer_number 7 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.2 -layer_number 7 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.4 -layer_number 7 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.6 -layer_number 7 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.8 -layer_number 7 
+
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.0 -layer_number 6 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.2 -layer_number 6 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.4 -layer_number 6 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.6 -layer_number 6 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.8 -layer_number 6 
+
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.0 -layer_number 5 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.2 -layer_number 5 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.4 -layer_number 5 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.6 -layer_number 5 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.8 -layer_number 5 
+
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.0 -layer_number 4 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.2 -layer_number 4 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.4 -layer_number 4 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.6 -layer_number 4 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.8 -layer_number 4 
+
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.0 -layer_number 0 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.2 -layer_number 0 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.4 -layer_number 0 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.6 -layer_number 0 
+python logistic_regression_probing.py -dataset CIFAR10 -model ResNet18 -corr 0.8 -layer_number 0 
+

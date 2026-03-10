@@ -1,0 +1,88 @@
+
+MASC_99: MASC for CIFAR10 RESNET18 corrupt subspace during training layerwis. We need to run this code with n=0.99 and later with n=1. The principal components created by n=1 are used by VeLPIC.py code. 
+VeLPIC.py: VeLPIC for CIFAR10 RESNET18 corrupt subspace during training layerwise 
+VeLPIC_Weight_change.py: VeLPIC Weight change experiment for CIFAR10 RESNET18 during training 
+--------------------------------------
+
+python MASC_99.py -corr 0.0 -layer_number 8 -run 1 
+python MASC_99.py -corr 0.2 -layer_number 8 -run 1
+python MASC_99.py -corr 0.4 -layer_number 8 -run 1
+python MASC_99.py -corr 0.6 -layer_number 8 -run 1
+python MASC_99.py -corr 0.8 -layer_number 8 -run 1
+
+python MASC_99.py -corr 0.0 -layer_number 7 -run 1 
+python MASC_99.py -corr 0.2 -layer_number 7 -run 1 
+python MASC_99.py -corr 0.4 -layer_number 7 -run 1 
+python MASC_99.py -corr 0.6 -layer_number 7 -run 1 
+python MASC_99.py -corr 0.8 -layer_number 7 -run 1 
+
+python MASC_99.py -corr 0.0 -layer_number 6 -run 1 
+python MASC_99.py -corr 0.2 -layer_number 6 -run 1  
+python MASC_99.py -corr 0.4 -layer_number 6 -run 1 
+python MASC_99.py -corr 0.6 -layer_number 6 -run 1  
+python MASC_99.py -corr 0.8 -layer_number 6 -run 1 
+
+python MASC_99.py -corr 0.0 -layer_number 5 -run 1 
+python MASC_99.py -corr 0.2 -layer_number 5 -run 1 
+python MASC_99.py -corr 0.4 -layer_number 5 -run 1 
+python MASC_99.py -corr 0.6 -layer_number 5 -run 1 
+python MASC_99.py -corr 0.8 -layer_number 5 -run 1 
+
+python MASC_99.py -corr 0.0 -layer_number 4 -run 1 
+python MASC_99.py -corr 0.2 -layer_number 4 -run 1 
+python MASC_99.py -corr 0.4 -layer_number 4 -run 1 
+python MASC_99.py -corr 0.6 -layer_number 4 -run 1 
+python MASC_99.py -corr 0.8 -layer_number 4 -run 1 
+
+python MASC_99.py -corr 0.0 -layer_number 0 -run 1 
+python MASC_99.py -corr 0.2 -layer_number 0 -run 1 
+python MASC_99.py -corr 0.4 -layer_number 0 -run 1 
+python MASC_99.py -corr 0.6 -layer_number 0 -run 1 
+python MASC_99.py -corr 0.8 -layer_number 0 -run 1 
+--------------------------------------
+ 
+python VeLPIC.py -corr 0.0 -layer_number 8 -run 1 
+python VeLPIC.py -corr 0.2 -layer_number 8 -run 1 
+python VeLPIC.py -corr 0.4 -layer_number 8 -run 1 
+python VeLPIC.py -corr 0.6 -layer_number 8 -run 1 
+python VeLPIC.py -corr 0.8 -layer_number 8 -run 1 
+
+python VeLPIC.py -corr 0.0 -layer_number 7 -run 1 
+python VeLPIC.py -corr 0.2 -layer_number 7 -run 1 
+python VeLPIC.py -corr 0.4 -layer_number 7 -run 1 
+python VeLPIC.py -corr 0.6 -layer_number 7 -run 1 
+python VeLPIC.py -corr 0.8 -layer_number 7 -run 1 
+
+python VeLPIC.py -corr 0.0 -layer_number 6 -run 1 
+python VeLPIC.py -corr 0.2 -layer_number 6 -run 1 
+python VeLPIC.py -corr 0.4 -layer_number 6 -run 1 
+python VeLPIC.py -corr 0.6 -layer_number 6 -run 1 
+python VeLPIC.py -corr 0.8 -layer_number 6 -run 1 
+
+python VeLPIC.py -corr 0.0 -layer_number 5 -run 1 
+python VeLPIC.py -corr 0.2 -layer_number 5 -run 1 
+python VeLPIC.py -corr 0.4 -layer_number 5 -run 1 
+python VeLPIC.py -corr 0.6 -layer_number 5 -run 1 
+python VeLPIC.py -corr 0.8 -layer_number 5 -run 1 
+
+python VeLPIC.py -corr 0.0 -layer_number 4 -run 1 
+python VeLPIC.py -corr 0.2 -layer_number 4 -run 1 
+python VeLPIC.py -corr 0.4 -layer_number 4 -run 1 
+python VeLPIC.py -corr 0.6 -layer_number 4 -run 1 
+python VeLPIC.py -corr 0.8 -layer_number 4 -run 1 
+
+python VeLPIC.py -corr 0.0 -layer_number 0 -run 1 
+python VeLPIC.py -corr 0.2 -layer_number 0 -run 1 
+python VeLPIC.py -corr 0.4 -layer_number 0 -run 1 
+python VeLPIC.py -corr 0.6 -layer_number 0 -run 1 
+python VeLPIC.py -corr 0.8 -layer_number 0 -run 1 
+--------------------------------------
+
+python VeLPIC_Weight_change.py -corr 0.0 -run 1
+python VeLPIC_Weight_change.py -corr 0.2 -run 1
+python VeLPIC_Weight_change.py -corr 0.4 -run 1
+python VeLPIC_Weight_change.py -corr 0.6 -run 1
+python VeLPIC_Weight_change.py -corr 0.8 -run 1
+--------------------------------------
+
+
