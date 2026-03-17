@@ -1,4 +1,5 @@
 # On the Dynamics \& Transferability of Latent Generalization during Memorization
+Paper - [On the Dynamics \& Transferability of Latent Generalization during Memorization](https://openreview.net/forum?id=t024Zm0tKF) (TMLR, 2026)
 
 
 
@@ -12,7 +13,7 @@
 
 # Abstract
 
-Deep networks have been known to have extraordinary generalization abilities, via mechanisms that aren't yet well understood. It is also known that upon shuffling labels in the training data to varying degrees, deep networks, trained with standard methods, can still achieve perfect or high accuracy on this corrupted training data. This phenomenon is called {\em memorization}, and typically comes at the cost of poorer generalization to true labels. Recent work has demonstrated, surprisingly, that the internal representations of such models retain significantly better latent generalization abilities than is directly apparent from the model. In  particular, it has been shown that such latent generalization can be recovered via simple probes (called MASC probes) on the layer-wise representations of the model. However, the origin and dynamics over training of this latent generalization during memorization is not well understood. Here, we track the training dynamics, empirically, and find that latent generalization abilities largely peak early in training, with model generalization. Next, we investigate whether the specific nature of the MASC probe is critical for our ability to extract latent generalization from the model's layerwise outputs. To this end, we first examine the mathematical structure of the MASC probe and show that it is a quadratic classifier, i.e. is non-linear. This brings up the possibility that this latent generalization is not linearly decodable, and that the model is fundamentally incapable of generalizing as well as the MASC probe, given corrupted training data. To investigate this, we designed a new linear probe for this setting, and find, surprisingly, that it has superior generalization performance in comparison to the quadratic probe, in most, but not all cases. Given that latent generalization is linearly decodable in most cases, we ask if there exists a way to leverage probes on layerwise representations, to directly edit model weights to immediately manifest the latent generalization to model generalization. To this end, we devise a way to transfer the latent generalization present in last-layer representations to the model using the new linear probe. This immediately endows such models with improved generalization in most cases, i.e. without additional training. We also explore training dynamics, when the aforementioned weight editing is done midway during training. Our findings provide a more detailed account of the rich dynamics of latent generalization during memorization, provide clarifying explication on the specific role of the probe in latent generalization, as well as demonstrate the means to leverage this understanding to directly transfer this generalization to the model.
+Deep networks have been known to have extraordinary generalization abilities, via mechanisms that aren't yet well understood. It is also known that upon shuffling labels in the training data to varying degrees, deep networks, trained with standard methods, can still achieve perfect or high accuracy on this corrupted training data. This phenomenon is called memorization, and typically comes at the cost of poorer generalization to true labels. Our recent work has demonstrated, surprisingly, that the internal representations of such models retain significantly better latent generalization abilities than is directly apparent from the model. In  particular, it has been shown that such latent generalization can be recovered via simple probes (called MASC probes) on the layer-wise representations of the model. However, the origin and dynamics over training of this latent generalization during memorization is not well understood. Here, we track the training dynamics, empirically, and find that latent generalization abilities largely peak early in training, with model generalization. Next, we investigate to what extent the specific nature of the MASC probe is critical for our ability to extract latent generalization from the model's layerwise outputs. To this end, we first examine the mathematical structure of the MASC probe and show that it is a quadratic classifier, i.e. is non-linear. This brings up the question of the extent to which this latent generalization might be linearly decodable from layerwise outputs. To investigate this, we designed a new linear probe for this setting.  We find cases where this linear probe outperforms MASC, and other cases, where the opposite happens, notably for many instances of ResNet-18 trained on CIFAR-10. Next, we consider the question of whether it is possible to transfer latent generalization to model generalization by directly editing model weights. To this end, we devise a way to transfer the latent generalization present in last-layer representations to the model using the new linear probe. This immediately endows such models with improved generalization in many cases, i.e. without additional training. We also explore training dynamics, when the aforementioned weight editing is done midway during training. Our findings provide a more detailed account of the rich dynamics of latent generalization during memorization, provide clarifying explication on the specific role of the probe in latent generalization, as well as demonstrate the means to leverage this understanding to directly transfer this generalization to the model. Our code is available at: https://github.com/simranketha/Dynamics_during_training_DNN .
 
 # Overview
 This repository provides python implementation of the algorithms described in the paper.
@@ -51,5 +52,19 @@ for gpu-version: pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 
 for cpu-version: pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cpu 
 ```
 
+# Citation
 
+Please cite our paper:
+```
+@article{
+ketha2026on,
+title={On the Dynamics \& Transferability of Latent Generalization during Memorization},
+author={Simran Ketha and Venkatakrishnan Ramaswamy},
+journal={Transactions on Machine Learning Research},
+issn={2835-8856},
+year={2026},
+url={https://openreview.net/forum?id=t024Zm0tKF},
+note={}
+}
+```
 
